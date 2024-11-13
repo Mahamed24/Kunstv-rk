@@ -7,5 +7,6 @@ public class Komposition extends Kunstvaerk {
         super(titel, aar);
         this.genre = genre;
         this.spilletid = spilletid;
+
     }
 }

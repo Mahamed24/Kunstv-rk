@@ -1,8 +1,12 @@
-public class TestDriver {
+﻿public class TestDriver {
     public static void main(String[] args) {
 
         Museum smk = new Museum("Statens Museum for Kunst", "Sølvtorvet, København");
         Museum fsm = new Museum("Fyns Stifts Museum", "Jernbanegade, Odense");
+        System.out.println();
+        System.out.println("Museum navn: " + smk.getNavn() + ", Adresse: " + smk.addresse);
+        System.out.println("Museum navn: " + fsm.getNavn() + ", Adresse: " + fsm.addresse);
+        System.out.println();
 
         Person lar = new Person("L.A. Ring", "dansk", 1854, 1933);
         Maleri kal = new Maleri("Kalkmanden", 1908, 80, 65, smk);
@@ -44,6 +48,24 @@ public class TestDriver {
 
         kvs.add(l);
         kvs.add(dff);
+
+        System.out.println("Malerier på Fyns Stifts Museum:");
+        kvs.findMalerierPaaMuseum("Fyns Stifts Museum");
+        System.out.println();
+        System.out.println("Malerier på Statens Museum for Kunst:");
+        kvs.findMalerierPaaMuseum("Statens Museum for Kunst");
+
+        System.out.println();
+
+        System.out.println("Sange med flere komponister:");
+        kvs.findSangeMedFlereKomponister();
+
+        System.out.println();
+
+        System.out.println("Antal læste sider:");
+        kvs.beregnAntalLaesteSider();
+
+
     }
 }
 

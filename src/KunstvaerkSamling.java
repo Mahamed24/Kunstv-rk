@@ -7,12 +7,12 @@ public class KunstvaerkSamling {
         this.kunstvaerker = new ArrayList<>();
     }
 
-    // Add a new artwork to the collection
+
     public void add(Kunstvaerk kunstvaerk) {
         kunstvaerker.add(kunstvaerk);
     }
 
-    // Find songs with multiple composers
+
     public void findSangeMedFlereKomponister() {
         for (Kunstvaerk kv : kunstvaerker) {
             if (kv instanceof Komposition && kv.getAntalOphavsmænd() > 1) {
@@ -21,7 +21,7 @@ public class KunstvaerkSamling {
         }
     }
 
-    // Find paintings in a specific museum
+
     public void findMalerierPaaMuseum(String museumNavn) {
         for (Kunstvaerk kv : kunstvaerker) {
             if (kv instanceof Maleri) {
